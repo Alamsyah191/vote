@@ -1,6 +1,7 @@
 <?php
 
 use App\Events\StatusLiked;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Route::get('/trigger/{data}', function ($data) {
     echo "<p>You have sent $data</p>";
     event(new StatusLiked($data));
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

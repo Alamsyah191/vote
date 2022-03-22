@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PilihEvent;
 use App\Models\Pilih;
 
 use Illuminate\Http\Request;
@@ -16,7 +17,9 @@ class PilihController extends Controller
      */
     public function index()
     {
-        //
+        $p = Pilih::all();
+
+        return response($p, 200);
     }
 
     /**
@@ -51,13 +54,16 @@ class PilihController extends Controller
             ];
             return response()->json($response, 200);
         } else {
-            $s = Pilih::create([
-                'user_id' => $request->user_id,
-                'calon_id' => $request->calon_id,
-                'vote' => $request->vote,
-            ]);
 
-            return response()->json($s, 200);
+            $calon = [
+                Pilih::create([
+                    'user_id' => $request->user_id,
+                    'calon_id' => $request->calon_id,
+                    'vote' => $request->vote,
+                ]),
+            ];
+            event(new PilihEvent($calon));
+            return response()->json($calon, 200);
         }
     }
 

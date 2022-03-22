@@ -42,6 +42,7 @@ class CalonController extends Controller
             'nama' => 'required',
             // 'foto' => 'required',
             'jurusan' => 'required',
+            'misi' => 'required',
         ]);
         $foto = $request->file('foto');
         if ($v->fails()) {
@@ -60,12 +61,16 @@ class CalonController extends Controller
                 $oke =  Calon::create([
                     'nama' => $request->nama,
                     'jurusan' => $request->jurusan,
+                    'visi' => $request->visi,
+                    'misi' => $request->misi,
                     'foto' => $sav,
                 ]);
                 return response($oke, 200);
             } else {
                 $oke =  Calon::create([
                     'nama' => $request->nama,
+                    'visi' => $request->visi,
+                    'misi' => $request->misi,
                     'jurusan' => $request->jurusan,
 
                 ]);
@@ -128,6 +133,8 @@ class CalonController extends Controller
                 $oke =  $calon->update([
                     'nama' => $request->nama,
                     'jursan' => $request->jursan,
+                    'visi' => $request->visi,
+                    'misi' => $request->misi,
                     'foto' => $sav,
                 ]);
                 return response($oke, 200);
@@ -135,6 +142,8 @@ class CalonController extends Controller
                 $oke =  $calon->update([
                     'nama' => $request->nama,
                     'jursan' => $request->jursan,
+                    'visi' => $request->visi,
+                    'misi' => $request->misi,
 
                 ]);
                 return response($oke, 200);

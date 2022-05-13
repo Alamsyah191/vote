@@ -55,7 +55,7 @@ export default function LoginForm() {
     <Container m="auto" boxShadow="lg" p={5}>
       <VStack alignItems="stretch" spacing={3}>
         <Heading as="h4" fontSize="lg" mb="5" textAlign="center">
-          Silahkan Anda masuk atau membuat akun terlebih dahulu jika belum ada
+          Silahkan Anda Masuk
         </Heading>
 
         <FormControl>

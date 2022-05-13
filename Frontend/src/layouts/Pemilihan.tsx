@@ -9,6 +9,7 @@ import {
   Spacer,
   Text,
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import { FaVoteYea } from 'react-icons/fa'
 import Card from '../components/Card'
 
@@ -21,6 +22,10 @@ export default function Pemilihan() {
     visiAndMisi:
       'Kami tidak pernah meragukan tamu meskipun permintaannya aneh-aneh',
   }))
+
+  useEffect(() => {
+    document.title = 'Profil Paslon | E - Voting'
+  })
 
   return (
     <Container maxW="container.xl">

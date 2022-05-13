@@ -9,6 +9,7 @@ import {
   Icon,
   Text,
 } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import Card from '../components/Card'
 
@@ -21,6 +22,10 @@ export default function Calon() {
     visiAndMisi:
       'Kami tidak pernah meragukan tamu meskipun permintaannya aneh-aneh',
   }))
+
+  useEffect(() => {
+    document.title = 'Daftar Calon | E - Voting'
+  })
 
   return (
     <Container maxW="container.xl">

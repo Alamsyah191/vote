@@ -19,9 +19,9 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Intro />} />
-            <Route path="login" element={<LoginForm />} />
+            <Route path="masuk" element={<LoginForm />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="register" element={<RegisterForm />} />
+            <Route path="daftar" element={<RegisterForm />} />
             <Route path="hasil-pemilihan" element={<Pemilihan />} />
             <Route path="calon" element={<Calon />} />
             <Route path="*" element={<NotFoundPage />} />

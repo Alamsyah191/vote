@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
   const menus = ['Calon', 'Hasil Pemilihan']
-  const auth = ['Login', 'Register']
+  const auth = ['Masuk', 'Daftar']
 
   const navigate = useNavigate()
 

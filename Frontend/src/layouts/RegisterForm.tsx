@@ -1,29 +1,29 @@
 import {
-    Button,
-    Container,
-    Divider,
-    FormControl,
-    FormLabel,
-    Heading,
-    Input,
-    Text,
-    VStack
+  Button,
+  Container,
+  Divider,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  VStack,
 } from '@chakra-ui/react'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export default function RegisterForm() {
-    const navigate = useNavigate()
-    
-    useEffect(() => {
-        document.title = 'Register | E - Voting'
-    })
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    document.title = 'Register | E - Voting'
+  })
 
   return (
     <Container alignSelf="center" m="auto" boxShadow="lg" p={5}>
       <VStack alignItems="stretch" spacing={3}>
         <Heading as="h4" fontSize="lg" mb="5" textAlign="center">
-          Silahkan Anda masuk atau membuat akun terlebih dahulu jika belum ada
+          Silahkan Buat Akun Anda
         </Heading>
 
         <FormControl>
@@ -48,7 +48,11 @@ export default function RegisterForm() {
         <Divider />
         <Text textAlign="right">
           Sudah punya akun?{' '}
-          <Button variant="link" color="blue.500" onClick={() => navigate('/')}>
+          <Button
+            variant="link"
+            color="blue.500"
+            onClick={() => navigate('/login')}
+          >
             Masuk
           </Button>
         </Text>

@@ -1,31 +1,17 @@
 
 ## API
 
-  <table>
-        <thead>
-            <tr>
-                <th>No</th>
-
-                <th>Judul</th>
-
-                <th>Api</th>
-                <th>Method</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>Comming Soon</td>
-                <td>Comming Soon</td>
-
-           <tr>
+ <table>
+     <th>Judul</th>
+    <th>Api</th>
+    <th>Method</th>
+      <tr>
                <td>1</td>
                <td>User all</td>
                <td>https://vote.puskamil.com/api/user</td>
                <td>Post</td>
             </tr>
-              <tr>
+    <tr>
                <td>2</td>
                <td>Login</td>
                <td>https://vote.puskamil.com/api/login</td>
@@ -90,10 +76,8 @@
                <td>Index</td>
                <td>https://vote.puskamil.com/api/</td>
                <td>get</td>
-
             </tr>
-        </tbody>
-    </table>
+</table>
 
 
 # Link

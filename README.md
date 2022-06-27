@@ -2,6 +2,7 @@
 ## API
 
  <table>
+     <th>No</th>
      <th>Judul</th>
     <th>Api</th>
     <th>Method</th>
